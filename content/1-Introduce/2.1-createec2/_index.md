@@ -39,6 +39,8 @@ pre : " <b> 1.1 </b> "
 
 + Ứng dụng công nghệ vào giảng dạy để nâng cao hiệu suất học tập.
 
+![VPC](/minhvinheducation1/images/image34.png)
+
 #### **2. Đỗ Trọng Nhân** – Giáo viên Tiếng Anh nâng cao (Hiệu Trưởng)
 
 **Thành tích học tập:**
@@ -63,6 +65,7 @@ pre : " <b> 1.1 </b> "
 
 + Sử dụng phương pháp phản xạ giúp học sinh tăng khả năng sử dụng tiếng Anh tự nhiên.
 
+![VPC](/minhvinheducation1/images/image31.png)
 
 #### **3.Vũ Quang Long** – Gia sư Tiếng Anh (Phó Hiệu Trưởng)
 
@@ -84,6 +87,8 @@ pre : " <b> 1.1 </b> "
 
 + Hướng dẫn học sinh cải thiện từ vựng và ngữ pháp bằng phương pháp thực hành.
 
+![VPC](/minhvinheducation1/images/image36.png)
+
 #### **4.Nguyễn Khoa Nam An** – Gia sư Toán, Văn, Tiếng Anh
 
 **Thành tích học tập:**
@@ -104,6 +109,8 @@ pre : " <b> 1.1 </b> "
 
 + Hướng dẫn học sinh cách sử dụng tiếng Anh trong môi trường thực tế.
 
+![VPC](/minhvinheducation1/images/image38.png)
+
 #### **5.Nguyễn Tấn Lợi** – Giáo viên Ngôn ngữ Tây Ban Nha & Tiếng Anh
 **Thành tích học tập:**
 
@@ -122,6 +129,8 @@ pre : " <b> 1.1 </b> "
 + Kết hợp giảng dạy ngôn ngữ với văn hóa giúp học sinh tiếp cận ngôn ngữ dễ dàng hơn.
 
 + Sử dụng phương pháp thực hành giúp học sinh cải thiện nhanh chóng.
+
+![VPC](/minhvinheducation1/images/image37.png)
 
 #### **6.Thái Thanh Kha** – Gia Sư Toán, Lý, Hóa
 
@@ -158,3 +167,7 @@ pre : " <b> 1.1 </b> "
 + Tập trung vào kỹ năng đọc-hiểu và luyện thi hiệu quả.
 
 + Sử dụng phương pháp thực hành giúp học sinh cải thiện giao tiếp.
+
+![VPC](/minhvinheducation1/images/image33.png)
+
+![VPC](/minhvinheducation1/images/image35.png)
