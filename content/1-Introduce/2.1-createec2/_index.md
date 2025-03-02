@@ -65,7 +65,7 @@ pre : " <b> 1.1 </b> "
 
 + Sử dụng phương pháp phản xạ giúp học sinh tăng khả năng sử dụng tiếng Anh tự nhiên.
 
-![VPC](/minhvinheducation1/images/image31.png)
+![VPC](/minhvinheducation1/images/image32.png)
 
 #### **3.Vũ Quang Long** – Gia sư Tiếng Anh (Phó Hiệu Trưởng)
 
