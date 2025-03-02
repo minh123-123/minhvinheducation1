@@ -93,4 +93,4 @@ Luyện đề kiểm tra định kỳ theo lộ trình
 
 📞 Liên Hệ Ngay để nhận tư vấn chi tiết và bắt đầu hành trình học tập cùng chúng tôi!
 
-![VPC](/images/image28.png)
+![VPC](/minhvinheducation1/images/image28.png)

@@ -5,5 +5,5 @@ weight : 1
 chapter : false
 ---
 # **Học, Học Nữa, Học Mãi**
-![VPC](/images/image31.png)
+![VPC](/minhvinheducation1/images/image31.png)
 
