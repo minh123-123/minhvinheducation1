@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Lớp 7 :: WORK WITH AMAZON SYSTEM MANAGER - SESSION MANAGER</title>
+    <title>Lớp 7 :: quang long entertainment</title>
 
     
-    <link href="/css/nucleus.css?1740933107" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1740933107" rel="stylesheet">
-    <link href="/css/hybrid.css?1740933107" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1740933107" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1740933107" rel="stylesheet">
-    <link href="/css/auto-complete.css?1740933107" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1740933107" rel="stylesheet">
-    <link href="/css/theme.css?1740933107" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1740933107" rel="stylesheet">
+    <link href="/css/nucleus.css?1740999589" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1740999589" rel="stylesheet">
+    <link href="/css/hybrid.css?1740999589" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1740999589" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1740999589" rel="stylesheet">
+    <link href="/css/auto-complete.css?1740999589" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1740999589" rel="stylesheet">
+    <link href="/css/theme.css?1740999589" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1740999589" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1740933107" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1740999589" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1740933107"></script>
+    <script src="/js/jquery-3.3.1.min.js?1740999589"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1740933107"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1740933107"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1740999589"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1740999589"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/\u003cuser_name\u003e.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1740933107"></script>
+<script type="text/javascript" src="/js/search.js?1740999589"></script>
 
     
   </div>
@@ -794,65 +794,7 @@
 
 
 
-	<p><strong>Test application</strong></p>
-<p>You can check the deployment by accessing to the DNS url of the load balancer the cloud formation templated created.</p>
-<ol>
-<li>Look for the load balancer:</li>
-</ol>
-<p><img src="/images/5.fwd/image122.png" alt="VPC"></p>
-<ol start="2">
-<li>Copy your DNS name for bedrock-ingress:</li>
-</ol>
-<p><img src="/images/5.fwd/image123.png" alt="VPC"></p>
-<ol start="3">
-<li>Paste it on a new browser tab to access to the interface</li>
-</ol>
-<p>In the UI you can see the chatbot to interact with it</p>
-<p><img src="/images/5.fwd/image124.png" alt="VPC"></p>
-<ol start="4">
-<li>Check if the model is able to give us an answer about OPEA:</li>
-</ol>
-<p><img src="/images/5.fwd/image125.png" alt="VPC"></p>
-<p><img src="/images/5.fwd/image126.png" alt="VPC"></p>
-<p>You may notice that the chatbot’s initial response is outdated or lacks specific details about OPEA. This is because OPEA is a relatively new project and was not included in the dataset used to train the language model. Since most LLMs (Large Language Models) are static, they rely solely on pre-existing training data and cannot automatically incorporate new developments or emerging technologies like OPEA.</p>
-<ol start="5">
-<li>Uploading Context to Improve Accuracy</li>
-</ol>
-<p>To address this limitation, RAG (Retrieval-Augmented Generation) enables real-time context retrieval. The ChatQnA UI includes an upload icon, allowing you to add relevant context.</p>
-<p><strong>How It Works:</strong></p>
-<pre><code>1. When you upload a document or link, it is sent to the DataPrep microservice.
-
-2. DataPrep processes the content and generates embeddings.
-
-3. The processed data is then stored in the Vector Database for retrieval.
-</code></pre>
-<p>By uploading updated documents or links, you expand the chatbot’s knowledge base, ensuring it provides more relevant, accurate, and up-to-date responses.</p>
-<p><img src="/images/5.fwd/image127.png" alt="VPC"></p>
-<p>The deployment allows you to upload either a file or a site. For this case, use the OPEA site:</p>
-<ul>
-<li>
-<p>Click on the upload icon to open the right panel</p>
-</li>
-<li>
-<p>Click on Paste Link</p>
-</li>
-<li>
-<p>Copy/paste the text <a href="https://opea-project.github.io/latest/introduction/index.html">https://opea-project.github.io/latest/introduction/index.html</a> to the entry box</p>
-</li>
-<li>
-<p>Click Confirm to start the indexing process
-When the indexing completes, you&rsquo;ll see an icon added below the text box, labeled <a href="https://opea-project.github.io/latest/introduction/index.html">https://opea-project.github.io/latest/introduction/index.html</a></p>
-</li>
-</ul>
-<ol start="6">
-<li>Ask the application after the context is provided:</li>
-</ol>
-<p>Ask &ldquo;What is OPEA?&rdquo; again to see the updated answer.</p>
-<p><img src="/images/2.prerequisite/image129.png" alt="VPC"></p>
-<p>This time, the chat bot responds correctly based on the data it added to the prompt from the new source, the OPEA web site.</p>
-<p><strong>Conclusion</strong></p>
-<p>In this task, you successfully deployed a RAG-powered chatbot using Amazon Bedrock. By uploading relevant context, you enabled the model to dynamically update and refine its responses based on new information. This process demonstrated how RAG integration enhances real-time adaptability, allowing the system to continuously improve its accuracy and relevance while leveraging the power of Amazon Bedrock.</p>
-
+	
 
 
 
@@ -1216,19 +1158,19 @@ When the indexing completes, you&rsquo;ll see an icon added below the text box, 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1740933107"></script>
-    <script src="/js/perfect-scrollbar.min.js?1740933107"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1740933107"></script>
-    <script src="/js/jquery.sticky.js?1740933107"></script>
-    <script src="/js/featherlight.min.js?1740933107"></script>
-    <script src="/js/highlight.pack.js?1740933107"></script>
+    <script src="/js/clipboard.min.js?1740999589"></script>
+    <script src="/js/perfect-scrollbar.min.js?1740999589"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1740999589"></script>
+    <script src="/js/jquery.sticky.js?1740999589"></script>
+    <script src="/js/featherlight.min.js?1740999589"></script>
+    <script src="/js/highlight.pack.js?1740999589"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1740933107"></script>
-    <script src="/js/learn.js?1740933107"></script>
-    <script src="/js/hugo-learn.js?1740933107"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1740999589"></script>
+    <script src="/js/learn.js?1740999589"></script>
+    <script src="/js/hugo-learn.js?1740999589"></script>
 
-    <link href="/mermaid/mermaid.css?1740933107" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1740933107"></script>
+    <link href="/mermaid/mermaid.css?1740999589" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1740999589"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

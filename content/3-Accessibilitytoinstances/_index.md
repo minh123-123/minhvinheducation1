@@ -20,3 +20,4 @@ Tại trung tâm, chương trình giảng dạy môn Văn được thiết kế 
 
 Ngữ văn không chỉ là một môn học trong nhà trường mà còn là công cụ giúp học sinh phát triển kỹ năng sống. Biết cách sử dụng ngôn từ tinh tế, lập luận chặt chẽ và thể hiện cảm xúc chân thành chính là nền tảng để các em tự tin hơn trong giao tiếp và thành công trong tương lai.
 
+

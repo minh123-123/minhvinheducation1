@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Lớp 8 :: WORK WITH AMAZON SYSTEM MANAGER - SESSION MANAGER</title>
+    <title>Lớp 8 :: quang long entertainment</title>
 
     
-    <link href="/css/nucleus.css?1740933107" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1740933107" rel="stylesheet">
-    <link href="/css/hybrid.css?1740933107" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1740933107" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1740933107" rel="stylesheet">
-    <link href="/css/auto-complete.css?1740933107" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1740933107" rel="stylesheet">
-    <link href="/css/theme.css?1740933107" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1740933107" rel="stylesheet">
+    <link href="/css/nucleus.css?1740999588" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1740999588" rel="stylesheet">
+    <link href="/css/hybrid.css?1740999588" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1740999588" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1740999588" rel="stylesheet">
+    <link href="/css/auto-complete.css?1740999588" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1740999588" rel="stylesheet">
+    <link href="/css/theme.css?1740999588" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1740999588" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1740933107" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1740999588" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1740933107"></script>
+    <script src="/js/jquery-3.3.1.min.js?1740999588"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1740933107"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1740933107"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1740999588"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1740999588"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/\u003cuser_name\u003e.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1740933107"></script>
+<script type="text/javascript" src="/js/search.js?1740999588"></script>
 
     
   </div>
@@ -770,15 +770,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#preparing-your-aws-environment-for-the-workshop">Preparing Your AWS Environment for the Workshop</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -802,156 +794,7 @@
 
 
 
-	<h3 id="preparing-your-aws-environment-for-the-workshop">Preparing Your AWS Environment for the Workshop</h3>
-<p>If you are not participating in an AWS-led event via Workshop Studio, you must set up your environment before proceeding with these labs. Keep in mind that the resources you create will incur costs, so be sure to clean them up once you have completed the workshop.</p>
-<h4 id="step-1-configuring-your-environment">Step 1: Configuring Your Environment</h4>
-<p>To set up your AWS account, follow these steps:</p>
-<ol>
-<li>
-<p>Click Launch Stack below to initiate AWS CloudFormation with pre-configured values in the us-east-1 region.</p>
-<p><a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://ws-assets-prod-iad-r-iad-ed304a55c2ca1aee.s3.us-east-1.amazonaws.com/50cf2fdb-1972-4e79-814f-12d2e6fb0dab/LaunchStack.yml&amp;stackName=LaunchStack">Launch Stack</a></p>
-</li>
-</ol>
-<p>If you prefer a different AWS region, remember to change the region accordingly.
-The CloudFormation stack will provision the following resources:</p>
-<p>EKS Cluster Deployment</p>
-<p>-Creates a new EKS cluster named opea-eks-cluster.</p>
-<p>-Deploys a worker node within the cluster using an M7i.24xlarge instance.</p>
-<p>CloudFormation Templates for Workshop Modules
-The stack also includes templates for the following modules:</p>
-<p>Module 1: ChatQnA Default</p>
-<p>Module 2: ChatQnA with Guardrails</p>
-<p>Module 3: ChatQnA with OpenSearch (open-source) as the vector database</p>
-<p>Module 4: ChatQnA with Remote Inference (Denvr) as the LLM</p>
-<p>Module 5: ChatQnA with Bedrock as the LLM</p>
-<p>Configuring Stack Parameters
-Before launching the stack, review and configure the following parameters:</p>
-<p>For Modules 1, 2, and 3:</p>
-<ul>
-<li>
-<p><strong>HuggingFaceToken</strong>: This token is required to download models from Hugging Face. If you plan to use the Guardrails feature, ensure your token has access to the meta-llama/Meta-Llama-Guard-2-8B model.</p>
-</li>
-<li>
-<p><strong>ModelID</strong>: The OPEA system primarily uses the Text Generation Inference toolkit. Select any compatible model from Hugging Face and provide
-its model ID.</p>
-</li>
-<li>
-<p><strong>OpeaRoleArn</strong>: Enter the ARN or name of the IAM role associated with your AWS account.</p>
-<ul>
-<li>If you are unsure, check the user information displayed in the top-right corner of the AWS Management Console.</li>
-<li>If your username does not contain a forward slash (/), copy the full name.</li>
-<li>If it does contain a forward slash, only use the portion before the slash.</li>
-</ul>
-</li>
-</ul>
-<p><strong>Example</strong>:</p>
-<ul>
-<li>If the display name is &ldquo;USER&rdquo;, enter &ldquo;USER&rdquo;.</li>
-<li>If the display name is &ldquo;ADMIN-ROLE/USER&rdquo;, enter &ldquo;ADMIN-ROLE&rdquo;.
-Alternatively, you can retrieve your ARN using the AWS CLI.</li>
-</ul>
-<p>aws sts get-caller-identity &ndash;query &lsquo;Arn&rsquo; &ndash;output text | awk -F: &lsquo;{print $NF}&rsquo; | (read id; if [[ $id == <em>&ldquo;user&rdquo;</em> ]]; then aws sts get-caller-identity &ndash;query &lsquo;Arn&rsquo; &ndash;output text; else role=$(echo $id | cut -d&rsquo;/&rsquo; -f2); aws iam get-role &ndash;role-name $role &ndash;query &lsquo;Role.Arn&rsquo; &ndash;output text; fi)</p>
-
-<div class="notices info" ><p>Mark the checkbox next to I acknowledge that AWS CloudFormation might create IAM resources</p>
-</div>
-
-<p>Deploying the CloudFormation Stack
-Once the parameters are set, click Create Stack.</p>
-<p><img src="/images/2/image008.png" alt="VPC"></p>
-<p>This process will initiate an AWS CodeBuild Project, which pulls in the opea-demo-builder open-source library.</p>
-<p>The AWS Cloud Development Kit (CDK) will generate the necessary CloudFormation templates to configure your AWS environment for the workshop.</p>
-<p>Monitoring Deployment Progress
-The deployment process takes approximately 25 minutes.
-Open the AWS CloudFormation Console and monitor the progress.</p>
-<p><img src="/images/2/image009.png" alt="VPC"></p>
-<p>Ensure that the following stacks reach the CREATE_COMPLETE status:</p>
-<ul>
-<li>The EKS cluster</li>
-<li>The ChatQnA application (default deployment)</li>
-</ul>
-<p>Some stacks may remain in REVIEW_IN_PROGRESS, as they will be deployed onto the EKS cluster later.</p>
-<p><img src="/images/2/image010.png" alt="VPC"></p>
-<h4 id="step-2-configuring-access-to-your-eks-cluster">Step 2: Configuring Access to Your EKS Cluster</h4>
-<p>Once the CloudFormation stacks are successfully deployed, you need to configure your local environment to interact with the Amazon EKS cluster using kubectl.</p>
-<p>Updating Your Kubernetes Configuration (kubeconfig)</p>
-<ol>
-<li>Open AWS CloudShell</li>
-</ol>
-<ul>
-<li>Click the CloudShell icon in the AWS Management Console.</li>
-<li>Alternatively, use your local AWS CLI, ensuring kubectl and the AWS CLI client are installed on your system.</li>
-</ul>
-<ol start="2">
-<li>Update kubeconfig</li>
-</ol>
-<ul>
-<li>
-<p>Run the following command (updating the region if necessary):
-<img src="/images/2/image011.png" alt="VPC"></p>
-</li>
-<li>
-<p>If successful, you should receive a confirmation message indicating that your configuration file has been updated.
-<img src="/images/2/image012.png" alt="VPC"></p>
-</li>
-</ul>
-<ol start="3">
-<li>Verify Connectivity to Your EKS Cluster
-Ensure you can interact with the cluster using kubectl.</li>
-</ol>
-<h4 id="step-3-verifying-eks-cluster-access">Step 3: Verifying EKS Cluster Access</h4>
-<p>After updating your kubeconfig, test whether you can connect to the cluster. If you encounter issues accessing pods via the AWS console or CloudShell, follow these steps:</p>
-<ol>
-<li>
-<p>Check Your IAM Access in the EKS Console</p>
-<ul>
-<li>
-<p>Navigate to the EKS Console.
-<img src="/images/2/image013.png" alt="VPC"></p>
-</li>
-<li>
-<p>Look for your IAM principal ARN under Access Entries.
-<img src="/images/2/image014.png" alt="VPC"></p>
-</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/2/image015.png" alt="VPC"></p>
-<ol start="2">
-<li>
-<p>If Your ARN Is Not Listed, Add It Manually</p>
-<ul>
-<li>Click Create Access Entry.</li>
-<li>Enter your IAM User ARN or Role ARN.
-<img src="/images/2/image016.png" alt="VPC"></li>
-</ul>
-</li>
-<li>
-<p>Attach Required Policies
-Assign the following permissions to your IAM role:</p>
-<ul>
-<li>AmazonEKSAdminPolicy</li>
-<li>AmazonEKSClusterAdminPolicy
-<img src="/images/2/image017.png" alt="VPC"></li>
-</ul>
-</li>
-<li>
-<p>Confirm Access by Listing Nodes</p>
-<ul>
-<li>
-<p>Run the following command to check if worker nodes are visible:
-<img src="/images/2/image018.png" alt="VPC"></p>
-</li>
-<li>
-<p>If the command returns a list of nodes, your cluster is successfully configured.
-<strong>Note</strong>: If no nodes appear, wait a few minutes and retry, as node provisioning may still be in progress.
-<img src="/images/2/image019.png" alt="VPC"></p>
-</li>
-</ul>
-</li>
-</ol>
-<h4 id="next-steps-explore-the-workshop-modules">Next Steps: Explore the Workshop Modules</h4>
-<p>Once you have successfully connected to your EKS cluster, you are ready to proceed with any of the workshop modules. Choose the module that best fits your learning objectives and begin your hands-on experience with AWS, Kubernetes, and AI-powered solutions.</p>
-
+	
 
 
 
@@ -1315,19 +1158,19 @@ Assign the following permissions to your IAM role:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1740933107"></script>
-    <script src="/js/perfect-scrollbar.min.js?1740933107"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1740933107"></script>
-    <script src="/js/jquery.sticky.js?1740933107"></script>
-    <script src="/js/featherlight.min.js?1740933107"></script>
-    <script src="/js/highlight.pack.js?1740933107"></script>
+    <script src="/js/clipboard.min.js?1740999589"></script>
+    <script src="/js/perfect-scrollbar.min.js?1740999589"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1740999589"></script>
+    <script src="/js/jquery.sticky.js?1740999589"></script>
+    <script src="/js/featherlight.min.js?1740999589"></script>
+    <script src="/js/highlight.pack.js?1740999589"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1740933107"></script>
-    <script src="/js/learn.js?1740933107"></script>
-    <script src="/js/hugo-learn.js?1740933107"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1740999589"></script>
+    <script src="/js/learn.js?1740999589"></script>
+    <script src="/js/hugo-learn.js?1740999589"></script>
 
-    <link href="/mermaid/mermaid.css?1740933107" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1740933107"></script>
+    <link href="/mermaid/mermaid.css?1740999589" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1740999589"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

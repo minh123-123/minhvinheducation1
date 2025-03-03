@@ -17,7 +17,7 @@ home = ["HTML", "RSS", "JSON"]
   disableNextPrev = false
 
 [Languages.en]
-title = "WORK WITH AMAZON SYSTEM MANAGER - SESSION MANAGER"
+title = "quang long entertainment"  # Đã thay đổi title
 weight = 1
 languageName = "English"
 
