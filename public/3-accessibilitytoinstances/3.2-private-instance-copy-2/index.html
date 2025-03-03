@@ -12,21 +12,21 @@
     <title>Lớp 9 :: quang long entertainment</title>
 
     
-    <link href="/css/nucleus.css?1740999588" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1740999588" rel="stylesheet">
-    <link href="/css/hybrid.css?1740999588" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1740999588" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1740999588" rel="stylesheet">
-    <link href="/css/auto-complete.css?1740999588" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1740999588" rel="stylesheet">
-    <link href="/css/theme.css?1740999588" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1740999588" rel="stylesheet">
+    <link href="/css/nucleus.css?1741000827" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1741000827" rel="stylesheet">
+    <link href="/css/hybrid.css?1741000827" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1741000827" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1741000827" rel="stylesheet">
+    <link href="/css/auto-complete.css?1741000827" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1741000827" rel="stylesheet">
+    <link href="/css/theme.css?1741000827" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1741000827" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1740999588" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1741000827" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1740999588"></script>
+    <script src="/js/jquery-3.3.1.min.js?1741000827"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1740999588"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1740999588"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1741000827"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1741000827"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/\u003cuser_name\u003e.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1740999588"></script>
+<script type="text/javascript" src="/js/search.js?1741000827"></script>
 
     
   </div>
@@ -770,15 +770,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#understand-rag-and-use-the-ui">Understand RAG and use the UI</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -802,37 +794,7 @@
 
 
 
-	<h3 id="understand-rag-and-use-the-ui">Understand RAG and use the UI</h3>
-<p>Now that you&rsquo;ve verified all services are running, let’s take a look at the UI provided by the implementation.</p>
-<p>To access the UI, open any browser and go to the DNS of the ChatQnA Load Balancer: <a href="http://chatqna-ingress-xxxxxxx.us-east-2.elb.amazonaws.com">http://chatqna-ingress-xxxxxxx.us-east-2.elb.amazonaws.com</a>  (Modify with your chatqna-ingressDNS URL)</p>
-<p>In the UI you can see the chatbot interact with it</p>
-<p><img src="/images/2/image052.png" alt="VPC"></p>
-<p>To verify the UI, go ahead and ask</p>
-<p><img src="/images/2/image053.png" alt="VPC"></p>
-<p><img src="/images/2/image054.png" alt="VPC"></p>
-<p>The answer is correct again because we already indexed our knowledge base on the previous step.</p>
-<p>Let&rsquo;s try something different. Will the app be able to answer about OPEA:</p>
-<p><img src="/images/2/image055.png" alt="VPC"></p>
-<p>You may notice that the chatbot&rsquo;s initial response is outdated or lacks specific details about OPEA. This is because OPEA is a relatively new project and was not included in the dataset used to train the language model. Since most language models are static—meaning they rely on the data available at the time of training—they cannot automatically incorporate recent developments or newly emerging topics like OPEA.</p>
-<p>However, RAG provides a solution by enabling real-time context retrieval. Within the UI, you&rsquo;ll find an option to upload relevant contextual information. When you do this, the document is sent to the DataPrep microservice, where it is converted into embeddings and stored in the Vector Database.</p>
-<p>By uploading a document or a link, you effectively expand the chatbot’s knowledge base with the latest information, improving the relevance and accuracy of its responses.</p>
-<p><img src="/images/4.s3/image057.png" alt="VPC"></p>
-<p>The deployment allows you to upload either a file or a site. For this case, use the OPEA site:</p>
-<ul>
-<li>Click on the upload icon to open the right panel</li>
-<li>Click on Paste Link</li>
-<li>Copy/paste the text <a href="https://opea-project.github.io/latest/introduction/index.html">https://opea-project.github.io/latest/introduction/index.html</a> to the entry box</li>
-<li>Click Confirm to start the indexing process</li>
-</ul>
-<p>When the indexing completes, you&rsquo;ll see an icon added below the text box, labeled <a href="https://opea-project.github.io/latest/introduction/index.html">https://opea-project.github.io/latest/introduction/index.html</a></p>
-<p><img src="/images/4.s3/image058.png" alt="VPC"></p>
-<p>Ask <strong>&ldquo;What is OPEA?&rdquo;</strong> again to see the updated answer.</p>
-<p><img src="/images/4.s3/image059.png" alt="VPC"></p>
-<p>This time, the chatbot responds correctly based on the data it added to the prompt from the new source, the OPEA website.</p>
-<p><strong>Conclusion</strong></p>
-<p>In this task, you explored the core structure of a RAG application, gaining insight into how each component functions and interacts within the system. From retrieving relevant information to generating accurate responses, every part plays a vital role in OPEA’s RAG workflow—enhancing response relevance through retrieval while improving accuracy with advanced language modeling. This hands-on session provided a clear understanding of how OPEA leverages RAG to process complex queries efficiently and refine model performance through seamless component integration.</p>
-<p>In the next task, you will implement guardrails for the chatbot. These guardrails are essential for detecting and mitigating biases, ensuring that AI-generated responses remain responsible, fair, and aligned with ethical AI principles.</p>
-
+	
 
 
 
@@ -1196,19 +1158,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1740999589"></script>
-    <script src="/js/perfect-scrollbar.min.js?1740999589"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1740999589"></script>
-    <script src="/js/jquery.sticky.js?1740999589"></script>
-    <script src="/js/featherlight.min.js?1740999589"></script>
-    <script src="/js/highlight.pack.js?1740999589"></script>
+    <script src="/js/clipboard.min.js?1741000827"></script>
+    <script src="/js/perfect-scrollbar.min.js?1741000827"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1741000827"></script>
+    <script src="/js/jquery.sticky.js?1741000827"></script>
+    <script src="/js/featherlight.min.js?1741000827"></script>
+    <script src="/js/highlight.pack.js?1741000827"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1740999589"></script>
-    <script src="/js/learn.js?1740999589"></script>
-    <script src="/js/hugo-learn.js?1740999589"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1741000827"></script>
+    <script src="/js/learn.js?1741000827"></script>
+    <script src="/js/hugo-learn.js?1741000827"></script>
 
-    <link href="/mermaid/mermaid.css?1740999589" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1740999589"></script>
+    <link href="/mermaid/mermaid.css?1741000827" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1741000827"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
